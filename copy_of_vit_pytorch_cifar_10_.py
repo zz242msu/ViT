@@ -21,8 +21,6 @@ Original file is located at
   CIFAR10 Dataset and NoteBook
 """
 
-!pip install ml_collections
-!pip install tqdm
 import torch
 from torchvision import transforms, datasets
 from torch.utils.data import DataLoader, RandomSampler, SequentialSampler
@@ -483,7 +481,7 @@ class Mlp(nn.Module):
 
 """## model"""
 
-!wget https://storage.googleapis.com/vit_models/imagenet21k/ViT-B_16.npz
+wget https://storage.googleapis.com/vit_models/imagenet21k/ViT-B_16.npz
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
