@@ -486,7 +486,7 @@ class Mlp(nn.Module):
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 model = VisionTransformer(config, IMG_SIZE, zero_head=True, num_classes=10)
-model.load_from(np.load("/content/ViT-B_16.npz"))
+model.load_from(np.load("ViT-B_16.npz"))
 model.to(device)
 
 """# 3.Training
